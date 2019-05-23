@@ -1,9 +1,10 @@
 class Hash
   def keys_of(*arguments)
     return_array = Array.new
-    Hash.each do |key,value|
-      if value == arguments
-        return_array << key
+    self.each do |key,value|
+      arguments.each do |i|
+        if i == value
+      return_array << key
     end
   end
   return_array
